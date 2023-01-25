@@ -1,0 +1,13 @@
+﻿@model News
+
+<tbody>
+    <tr>
+        <th>@Model.ID</th>
+        <td>@Model.Title</td>
+        <td>@Model.Content</td>
+        <td>@Model.PublishDate</td>
+
+        <td><a asp-controller="Home" asp-action="Delete" asp-route-id="@Model.ID" class="btn btn-danger">Sil</a></td>
+        <td><a asp-controller="Home" asp-action="UpdateNew" asp-route-id="@Model.ID" class="btn btn-info">Güncelle</a></td>
+    </tr>
+</tbody>

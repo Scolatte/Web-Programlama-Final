@@ -1,0 +1,13 @@
+﻿@model News
+
+    <div class="col-md-6">
+        <div class="tn-img">
+            <img src="@Model.Image" />
+            <div class="tn-content">
+                <div class="tn-content-inner">
+                    <a class="tn-date"><i class="far fa-clock"></i> @Model.PublishDate.ToShortDateString()</a>
+                    <a class="tn-title" asp-controller="Home" asp-action="SingleNewPage" asp-route-newID="@Model.ID">@Model.Title</a>
+                </div>
+            </div>
+        </div>
+    </div>
